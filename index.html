@@ -9,29 +9,152 @@
 </head>
 <body>
     <header>
-        <nav class="flex f-wrap">
+        <nav>
                 <h1 class="white">START BOOTSTRAP</h1>
-                <ul class="flex white">
-                    <li><a href="" class="white">PORTFOLIO</a></li>
-                    <li><a href="" class="white">ABOUT</a></li>
-                    <li><a href="" class="white">CONTACT</a></li>
+                <ul>
+                    <li><a href="#portfolio" class="white">PORTFOLIO</a></li>
+                    <li><a href="#about" class="white">ABOUT</a></li>
+                    <li><a href="#contact" class="white">CONTACT</a></li>
                 </ul>
+                <button><i class="fa-solid fa-sliders"></i></button>
         </nav>
-        <div class="hero flex f-center f-col gap">
-            <img src="./assets/img/photo_2023-08-18_18-22-26.jpg" alt="" class="img">
-            <h1 class="white">START BOOTSTRAP</h1>
-            <div class="flex f-center gap">
-                <div class="line"></div>
-                <i class="fa-solid fa-star white"></i>
-                <div class="line"></div>
+        <div class="hero flex f-center f-col">
+            <div class="back-img">
+                <div class="circle"></div>
+                <img src="./assets/img/[removal.ai]_ad8a6336-39f3-4951-a991-ceb1408b327a-photo_2023-08-18_18-22-26.png" alt="" class="img">
             </div>
-            <P>Web Designer</P>
+            <h1 class="white">START BOOTSTRAP </h1>
+            <div class="flex f-center gap">
+                <div class="line-w"></div>
+                <i class="fa-solid fa-star white"></i>
+                <div class="line-w"></div>
+            </div>
+            <P class="white">Web Designer</P>
         </div>
-        <main>
-            <section id="portfolio">
-                
-            </section>
-        </main>
     </header>
+    <main>
+        <section id="portfolio" class="flex f-col f-center">
+            <h2 class="color">PORTFOLIO</h2>
+            <div class="flex f-center gap">
+                <div class="line-b"></div>
+                <i class="fa-solid fa-star"></i>
+                <div class="line-b"></div>
+            </div>
+            <div  class="flex f-col gap">
+                <div class="flex f-center gap f-wrap">
+                    <div class="html card flex f-center">
+                        <img src="./assets/img/pngaaa.com-4456982.png" alt="" class="html-img">            
+                    </div>
+                    <div class="css card flex f-center">
+                        <img src="./assets/img/html5-logo-31822.png" alt="" class="port-img">
+                    </div>
+                    <div class="js card flex f-center">                                                                                                     
+                        <img src="./assets/img/javascript-39394.png" alt="" class="port-img">
+                    </div>
+                </div>
+                <div class="flex f-center gap f-wrap">
+                    <div class="bootstrap card flex f-center">
+                        <img src="./assets/img/pngaaa.com-3801772.png" alt="" class="port-img">
+                    </div>
+                    <div class="git card flex f-center">
+                        <img src="./assets/img/pngaaa.com-94954.png" alt="" class="port-img">
+                    </div>
+                    <div class="github card flex f-center">
+                        <img src="./assets/img/pngaaa.com-29128.png" alt="" class="port-img">
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="about" class="flex f-col f-center">
+            <h2 class="white">ABOUT</h2>
+            <div class="flex f-center gap">
+                <div class="line-w"></div>
+                <i class="fa-solid fa-star white"></i>
+                <div class="line-w"></div>
+            </div>
+                <div class="flex f-center f-wrap gap">
+                        <p class="white about-p">
+                            Freelancer is a free bootstrap theme 
+                            created by Start Bootstrap. The 
+                            download includes the compleye source
+                            files including HTML,CSS,and 
+                            JavaScript as well as opcional SASS
+                            stylesheet for easy customization.
+                        </p>
+                        <p class="white about-p">
+                           you can creat your own custom avatar
+                           for the masthead, changes the icon in the
+                           dividers, and add your email address to
+                           the contact form to make it fully functional!
+                        </p>
+                </div>
+                <button class="flex f-center gap">
+                    <i class="fa-solid fa-download white"></i>
+                    <p class="white">Free Download</p>
+                </button>
+        </section>
+        <section id="contact" class="flex f-col f-center">
+            <h2>CONTACT ME</h2>
+            <div class="flex f-center gap">
+                <div class="line-b"></div>
+                <i class="fa-solid fa-star"></i>
+                <div class="line-b"></div>
+            </div>
+            <form class="flex f-col gap">
+                <div class="flex f-col">
+                    <label for="full">Full name</label>
+                    <input id="full" type="text">
+                </div>
+                <div class="flex f-col">
+                    <label for="email">Email address</label>
+                    <input id="email" type="text">
+                </div> 
+                <div class="flex f-col">
+                    <label for="phone">Phone number</label>
+                    <input id="phone" type="text">
+                </div> 
+                <div class="flex f-col">
+                    <label for="full">Full name</label>
+                    <textarea></textarea>
+                </div>
+                <input type="submit" value="send" class="send">
+            </form>
+        </section>
+    </main>
+    <footer class="flex f-col">
+        <div class="flex f-center f-wrap">
+            <div class="foot flex f-col f-center white">
+                <h3>LOCATION</h3>
+                <P>Syria Homs Fairouza AL-Msmoum street</P>
+            </div>
+            <div  class="foot flex f-col f-center white">
+                <h3>AROUND THE WEB</h3>
+                <div class="flex f-center gap">
+                    <div class="foot-circle flex f-center">
+                        <a href="https://www.facebook.com/mousa.sarhan.71?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f white"></i></a>
+                    </div>
+                    <div class="foot-circle flex f-center"> 
+                        <a href="https://www.instagram.com/__mousa_sarhan__/"><i class="fa-brands fa-instagram white"></i></a>
+                    </div>
+                    <div class="foot-circle flex f-center">
+                        <a href="https://www.linkedin.com/in/mousa-sarhan-593999289/"><i class="fa-brands fa-linkedin-in white"></i></a>
+                    </div>
+                    <div class="foot-circle flex f-center">
+                        <a href="https://github.com/Mousa17sa"><i class="fa-brands fa-github white"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="foot flex f-col f-center white">
+                <h3>ABOUT FREELANCER</h3>
+                <P>Freelancer is a free to use, MIT licensed</P>
+                <p>Bootstrap theme created by <a href="#">Start Bootstrap</a></p>
+            </div>
+        </div>
+        <div class="copy-foot flex f-center">
+            <p>Copyright &#169 your Website 2023</p>
+        </div>
+    </footer>
 </body>
 </html>

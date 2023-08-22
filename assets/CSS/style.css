@@ -2,28 +2,228 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-.hero{
-    height: 100vh;
-    background-color: rgb(27, 188, 155);
-}
+/*start header*/
 nav{
+    width: 100vw;
     height: 60px;
+    padding: 0 10%;
     background-color: rgb(45, 62,80);
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    color: white;
 }
 
-ul{
-    width:50% ;
+nav ul{
+    display: flex;
     list-style: none;
-    gap: 10px;
-    padding-right: 10%;
+    gap: 20px;
     justify-content: flex-end;
 }
 nav h1{
-    width: 50%;
-    padding-left:10% ;
+    width: max-content;
+    font-size: 25px;
 }
+nav ul a{
+    text-decoration: none;
+    color: white;
+}
+nav button{
+    display: none;
+    background-color:  rgb(45, 62,80);
+    border: none;
+    color: white;
+}
+.hero{
+    height: 100vh;
+    padding: 100px 0;
+    background-color: rgb(27, 188, 155);
+    gap: 30px;
+
+}
+
+.hero h1{
+    font-size: 40px;
+}
+.back-img{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+.back-img::before{
+    content: "";
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 40px 0 30px rgb(27, 188, 155);
+    z-index: 4;
+}
+.back-img .img{
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.circle{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-color: rgb(45, 62,80);
+    overflow: hidden;
+}
+/*end header*/
+
+/*start portfolio*/
+
+#portfolio{
+    height: 100vh;
+    padding: 0 6%;
+    gap: 30px;
+}
+h2{
+    font-size: 30px;
+}
+
+.card{
+    width: 210px;
+    height: 150px;
+    border-radius: 6px;
+}
+.port-img{
+    width: 130px;
+}
+.html-img{
+    width: 80px;
+}
+.html{
+    background-color: rgb(228, 133, 54);
+}
+.css{
+    background-color: rgb(58, 145, 216);
+}
+.js{
+    background-color: rgb(236, 241, 37);
+}
+.bootstrap{
+    background-color: rgb(150, 92, 165);
+}
+.git{
+    background-color: rgb(216, 121, 75);
+}
+.github{
+    background-color: gray;
+}
+
+/*end portfolio*/
+
+/*start about*/
+
+#about{
+    height: 100vh;
+    padding: 0 6%;
+    background-color: rgb(27, 188, 155);
+    gap: 30px;
+}
+.about-p{
+    width: 250px;
+}
+#about button{
+    width: 170px;
+    height: 50px;
+    background-color: rgb(27, 188, 155);
+    border: 2px white solid;
+    border-radius: 4px;
+}
+
+/*end about*/
+
+/*start contact*/
+#contact{
+    height: 100vh;
+    padding: 0 6%;
+    gap: 30px;
+}
+form{
+    width: 70%
+}
+form div input{
+    border: none ;
+    border-bottom: 1px solid;
+}
+textarea{
+    height: 60px;
+    border: none;
+    border-bottom: 1px solid;
+}
+.send{
+    width: 70px;
+    height: 40px;
+    background-color: rgb(27, 188, 155);
+    color: white;
+    border-radius: 4px;
+    border: none;
+}
+
+/*end contact*/
+
+/*start footer*/
+
+footer{
+    height: 50vh;
+    background-color:  rgb(45, 62,80);
+    justify-content: space-between;
+    padding-top: 50px;
+}
+footer h3{
+    margin-bottom: 15px;
+}
+footer:first-child{
+    width: 100%;
+    justify-content: space-around;
+    padding: 3%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.foot{
+    width: 280px;
+    margin-bottom: 30px;
+}
+footer i{
+    font-size: 10px;
+}
+footer div p a{
+    text-decoration:underline;
+    color: rgb(27, 188, 155);
+}
+.foot-circle{
+    width: 25px;
+    height: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.copy-foot{
+    height: 10%;
+    background-color: rgb(27, 27,48);
+    color: white;
+    text-align: center;
+    
+}
+
+/*end footer*/
+
+/*flex*/
 
 .flex{
     display: flex;
@@ -42,18 +242,94 @@ nav h1{
     gap: 10px;
 }
 
-.line{
-    width: 100px;
+/*end flex*/
+
+.line-w{
+    width: 70px;
     height: 2px;
     background-color: white;
 }
-
-.img{
-    width: 100px;
+.line-b{
+    width: 70px;
+    height: 2px;
+    background-color: black;
 }
+.color{
+    color: rgb(45, 62,80);
+}
+
 .white{
     color: white;
 }
-a{
-    text-decoration: none;
+
+/*start media*/
+
+@media screen and (max-width : 756px){
+    nav button{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
 }
+
+@media screen and (max-width : 616px) {
+    .card{
+        width: 170px;
+        height: 100px;
+    }
+    .html-img{
+        width: 60px;
+    }
+    .port-img{
+        width: 93px;
+    }
+}
+
+@media screen and (max-width : 415px) {
+    nav{
+        gap: 15px;
+    }
+    nav button{
+        display: block;
+    }
+    nav ul{
+        display: none;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+   
+ 
+    .hero h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 17px;
+    }
+    .card{
+        width: 115px;
+        height: 80px;
+    }
+    .html-img{
+        width: 45px;
+    }
+    .port-img{
+        width: 75px;
+    }
+    .send{
+        width: 50px;
+        height: 25px;
+        font-size: 10px;
+    }
+     footer h3{
+        font-size: 15px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+}
+
+
+
+
