@@ -9,6 +9,7 @@ nav{
     width: 100vw;
     height: 60px;
     padding: 0 10%;
+    z-index: 10;
     background-color: rgb(45, 62,80);
     display: flex;
     align-items: center;
@@ -33,7 +34,11 @@ nav ul a{
     text-decoration: none;
     color: white;
 }
+.a-hover:hover{
+    color: rgb(205, 194, 194);
+}
 nav button{
+    cursor: pointer;
     display: none;
     background-color:  rgb(45, 62,80);
     border: none;
@@ -88,18 +93,49 @@ nav button{
 /*start portfolio*/
 
 #portfolio{
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 6%;
     gap: 30px;
 }
-h2{
-    font-size: 30px;
-}
+
 
 .card{
     width: 210px;
     height: 150px;
     border-radius: 6px;
+    transition: all 0.4s;
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: gray;
+}
+.first-content{
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+}
+.card:hover .first-content{
+    height: 0px;
+    width: 0%;
+    opacity: 0;
+}
+.second-content{
+    height: 0%;
+    width: 0%;
+    opacity: 0;
+    transition: all 0.5s;
+    font-size: 0px;
+    transform: rotate(90deg);
+}
+.card:hover .second-content{
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* transition: all; */
+    transform: rotate(0deg);
 }
 .port-img{
     width: 130px;
@@ -131,7 +167,7 @@ h2{
 /*start about*/
 
 #about{
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 6%;
     background-color: rgb(27, 188, 155);
     gap: 30px;
@@ -139,35 +175,55 @@ h2{
 .about-p{
     width: 250px;
 }
-#about button{
+.btn{
+    cursor: pointer;
     width: 170px;
     height: 50px;
     background-color: rgb(27, 188, 155);
     border: 2px white solid;
     border-radius: 4px;
 }
+.down{
+    width: 181px;
+    height: 56px;
+}
+.btn:hover{
+    background-color: hsl(161, 75%, 42%);
+    opacity: 0.7;
+}
+.btn:active{
+    width: 180px;
+    height: 55px;
+    font-size: 15px;
+}
 
 /*end about*/
 
 /*start contact*/
 #contact{
-    height: 100vh;
+    min-height: 100vh;
     padding: 0 6%;
     gap: 30px;
 }
 form{
-    width: 70%
+    width: 50%
 }
-form div input{
+form input{
+    height: 40px;
     border: none ;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid gray;
 }
 textarea{
-    height: 60px;
+    height: 70px;
     border: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid gray;
+}
+.in{
+    width: 76px;
+    height: 46px;
 }
 .send{
+    cursor: pointer;
     width: 70px;
     height: 40px;
     background-color: rgb(27, 188, 155);
@@ -175,13 +231,17 @@ textarea{
     border-radius: 4px;
     border: none;
 }
+.send:active{
+    width: 75px;
+    height: 45px;
+    font-size: 15px;
+}
 
 /*end contact*/
 
 /*start footer*/
 
 footer{
-    height: 50vh;
     background-color:  rgb(45, 62,80);
     justify-content: space-between;
     padding-top: 50px;
@@ -189,7 +249,8 @@ footer{
 footer h3{
     margin-bottom: 15px;
 }
-footer:first-child{
+.foot1{
+    height: 40vh;
     width: 100%;
     justify-content: space-around;
     padding: 3%;
@@ -197,6 +258,7 @@ footer:first-child{
     flex-wrap: wrap;
 }
 .foot{
+    /* height: 30vh; */
     width: 280px;
     margin-bottom: 30px;
 }
@@ -214,7 +276,8 @@ footer div p a{
     border-radius: 50%;
 }
 .copy-foot{
-    height: 10%;
+    width: 100%;
+    height: 5vh;
     background-color: rgb(27, 27,48);
     color: white;
     text-align: center;
@@ -223,7 +286,9 @@ footer div p a{
 
 /*end footer*/
 
-/*flex*/
+/*common properties*/
+
+/*start flex*/
 
 .flex{
     display: flex;
@@ -239,7 +304,7 @@ footer div p a{
     flex-direction: column;
 }
 .gap{
-    gap: 10px;
+    gap: 15px;
 }
 
 /*end flex*/
@@ -257,10 +322,15 @@ footer div p a{
 .color{
     color: rgb(45, 62,80);
 }
+.size{
+    font-size: 30px;
+}
 
 .white{
     color: white;
 }
+
+/*end common properties*/
 
 /*start media*/
 
@@ -278,6 +348,9 @@ footer div p a{
         width: 170px;
         height: 100px;
     }
+    .card:hover .second-content{
+        font-size: 25px;
+    }
     .html-img{
         width: 60px;
     }
@@ -286,7 +359,7 @@ footer div p a{
     }
 }
 
-@media screen and (max-width : 415px) {
+@media screen and (max-width : 420px) {
     nav{
         gap: 15px;
     }
@@ -299,17 +372,24 @@ footer div p a{
     nav h1{
         font-size: 20px;
     }
-   
- 
     .hero h1{
         font-size: 20px;
     }
     h2{
         font-size: 17px;
     }
+    #portfolio{
+        padding: 4%;
+    }
     .card{
         width: 115px;
         height: 80px;
+    }
+    .card:hover .second-content{
+        font-size: 17px;
+    }
+    .card-gap{
+        gap: 10px;
     }
     .html-img{
         width: 45px;

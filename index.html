@@ -12,9 +12,9 @@
         <nav>
                 <h1 class="white">START BOOTSTRAP</h1>
                 <ul>
-                    <li><a href="#portfolio" class="white">PORTFOLIO</a></li>
-                    <li><a href="#about" class="white">ABOUT</a></li>
-                    <li><a href="#contact" class="white">CONTACT</a></li>
+                    <li><a href="#portfolio" class="white a-hover">PORTFOLIO</a></li>
+                    <li><a href="#about" class="white a-hover">ABOUT</a></li>
+                    <li><a href="#contact" class="white a-hover">CONTACT</a></li>
                 </ul>
                 <button><i class="fa-solid fa-sliders"></i></button>
         </nav>
@@ -34,41 +34,69 @@
     </header>
     <main>
         <section id="portfolio" class="flex f-col f-center">
-            <h2 class="color">PORTFOLIO</h2>
+            <h2 class="color size">PORTFOLIO</h2>
             <div class="flex f-center gap">
                 <div class="line-b"></div>
                 <i class="fa-solid fa-star"></i>
                 <div class="line-b"></div>
             </div>
-            <div  class="flex f-col gap">
-                <div class="flex f-center gap f-wrap">
+            <div  class="flex f-col gap card-gap">
+                <div class="flex f-center gap card-gap f-wrap">
                     <div class="html card flex f-center">
-                        <img src="./assets/img/pngaaa.com-4456982.png" alt="" class="html-img">            
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/pngaaa.com-4456982.png" alt="" class="html-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>HTML</span>
+                        </div>            
                     </div>
                     <div class="css card flex f-center">
-                        <img src="./assets/img/html5-logo-31822.png" alt="" class="port-img">
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/html5-logo-31822.png" alt="" class="port-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>CSS</span>
+                        </div>  
                     </div>
-                    <div class="js card flex f-center">                                                                                                     
-                        <img src="./assets/img/javascript-39394.png" alt="" class="port-img">
+                    <div class="js card flex f-center">
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/javascript-39394.png" alt="" class="port-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>JS</span>
+                        </div>                                                                                                     
                     </div>
                 </div>
-                <div class="flex f-center gap f-wrap">
+                <div class="flex f-center gap card-gap f-wrap">
                     <div class="bootstrap card flex f-center">
-                        <img src="./assets/img/pngaaa.com-3801772.png" alt="" class="port-img">
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/pngaaa.com-3801772.png" alt="" class="port-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>BOOTSTRAP</span>
+                        </div>
                     </div>
                     <div class="git card flex f-center">
-                        <img src="./assets/img/pngaaa.com-94954.png" alt="" class="port-img">
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/pngaaa.com-94954.png" alt="" class="port-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>GIT</span>
+                        </div>
                     </div>
                     <div class="github card flex f-center">
-                        <img src="./assets/img/pngaaa.com-29128.png" alt="" class="port-img">
+                        <div class="first-content flex f-center">
+                            <img src="./assets/img/pngaaa.com-29128.png" alt="" class="port-img">
+                        </div>
+                        <div class="second-content flex f-center">
+                            <span>GITHUB</span>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
         </section>
         <section id="about" class="flex f-col f-center">
-            <h2 class="white">ABOUT</h2>
+            <h2 class="white size">ABOUT</h2>
             <div class="flex f-center gap">
                 <div class="line-w"></div>
                 <i class="fa-solid fa-star white"></i>
@@ -90,41 +118,33 @@
                            the contact form to make it fully functional!
                         </p>
                 </div>
-                <button class="flex f-center gap">
-                    <i class="fa-solid fa-download white"></i>
-                    <p class="white">Free Download</p>
-                </button>
+                <div class="down flex f-center">
+                    <button class="btn flex f-center gap">
+                        <i class="fa-solid fa-download white"></i>
+                        <p class="white">Free Download</p>
+                    </button>
+                </div>
         </section>
         <section id="contact" class="flex f-col f-center">
-            <h2>CONTACT ME</h2>
+            <h2 class="color size">CONTACT ME</h2>
             <div class="flex f-center gap">
                 <div class="line-b"></div>
                 <i class="fa-solid fa-star"></i>
                 <div class="line-b"></div>
             </div>
             <form class="flex f-col gap">
-                <div class="flex f-col">
-                    <label for="full">Full name</label>
-                    <input id="full" type="text">
+                <input id="full" type="text" placeholder="Full name">
+                <input id="email" type="text" placeholder="Email address">
+                <input id="phone" type="text" placeholder="Phone number">
+                <textarea placeholder="Message"></textarea>
+                <div class="in flex f-center">
+                    <input type="submit" value="send" class="send">
                 </div>
-                <div class="flex f-col">
-                    <label for="email">Email address</label>
-                    <input id="email" type="text">
-                </div> 
-                <div class="flex f-col">
-                    <label for="phone">Phone number</label>
-                    <input id="phone" type="text">
-                </div> 
-                <div class="flex f-col">
-                    <label for="full">Full name</label>
-                    <textarea></textarea>
-                </div>
-                <input type="submit" value="send" class="send">
             </form>
         </section>
     </main>
-    <footer class="flex f-col">
-        <div class="flex f-center f-wrap">
+    <footer class="flex f-col f-center">
+        <div class="foot1 flex f-center f-wrap">
             <div class="foot flex f-col f-center white">
                 <h3>LOCATION</h3>
                 <P>Syria Homs Fairouza AL-Msmoum street</P>
